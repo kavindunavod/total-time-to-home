@@ -1,17 +1,16 @@
-object project8 {
+object runningTime{
+    def easyPase(distance:Int): Double={
+        distance/8.0
+    }
 
-  def main(args: Array[String]): Unit = {
+    def tempo(distance:Int): Double={
+        distance/7.0
+    }
+    def calculateTotalTime(): Double={
+        easyPase(2)+tempo(3)+easyPase(2)
+    }
 
-    calculate();
-  }
-
-  def calculate(): Unit = {
-    val first = 8*2;
-    val second = 7*3;
-    val third = 2*8;
-    val total = first + second + third;
-    println("total time to go to the home: " +total);
-
-  }
-
+    def main(args: Array[String]):Unit={
+        println(s"Total running time: ${calculateTotalTime()} minutes")
+    }
 }
